@@ -91,16 +91,14 @@ isLeapYear();
   - Alert `The factorial of [number] is [factorial]`
 
 */
-function factorial(n){
-  //base case
-  let n = +prompt("Enter number for factorial")
-  if(n == 0 || n == 1){
-      return 1;
-  //recursive case
-  }else{
-      return n * factorial(n-1);
-  }
-}
 
-answer = factorial(n)
-alert("The factorial of " + n + " is " + answer);
+getFactorial();
+function getFactorial(){
+  let number = +prompt("Enter a number")
+  let product = 1;
+  for (let i = number ; i >= 1; i--){
+    product *= i;
+  }
+  alert(`The factorial  of ${number} is ${ product}`)
+}
+getFactorial();
