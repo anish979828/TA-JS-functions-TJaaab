@@ -263,11 +263,21 @@ let oddOrEven = declare(Number){
 let oddOrEven = (num) => num % 2 == 0 ? "NUmber is even" : "Number is Odd";
 
 // - Write an Arrow Function with curly brackets
-let oddOrEven = (num) => { num % 2 == 0 ? "NUmber is even" : "Number is Odd" };
+let oddOrEven = (num) => {
+  if (Number % 2 === 0) {
+    return "Number is odd"
+  }else if (Number % 2 !== 2){
+    return "Number is odd"
+  }
+} 
+
+
 
 // - Execute the function
-Let oddNum = oddOrEven();
+let oddNum = oddOrEven();
 
 // - Execute the function and store the return value in a variable
+let check = oddOrEven()
 
 // - What is the typeof returnValue
+// typeof check is a "number"
