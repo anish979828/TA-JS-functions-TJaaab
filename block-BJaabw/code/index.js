@@ -11,8 +11,10 @@ minToSec(2) ➞ 120
 */
 
 // - Write a Function Decleration for above problem
-function minToSec() {
-  // Your code
+function minToSec(minutes) {
+  let second = minutes * 60
+  return second
+
 }
 // - Execute the function with required parameter
 
@@ -26,9 +28,10 @@ isInRange(1, 10, 19); // false
 */
 
 // - Write a Function Decleration for above problem
-function isInRange() {
-  // Your code
+function isInRange(lower, upper, number) {
+  return lower < number && upper > number
 }
+
 // - Execute the function with required parameter
 
 /* 2. calculateBMI
@@ -49,13 +52,22 @@ Obese: BMI is 30 or more
 
 */
 
-function calculateBMI() {
-  // Your code
+function calculateBMI(height, weight) {
+  let bmi = weight / (height * height)
+  if (bmi < 18.5){
+    return "underweignt"
+  }else if (bmi >= 18.5 && bmi <= 24.9){
+    return "Normal"
+  }else if (bmi >= 25 && bmi <= 29.9){
+    return "overweight"
+  }else {
+    return "Obese"
+  }
 }
 
-/* 3. appropiateDrinks
+/* 3. appropriateDrinks
 
-Create a function that take the age are return the appropiate drink based on these conditions:
+Create a function that take the age and  return the appropriate drink based on these conditions:
 
 - Under 14 years old — return "drink fruit juice"
 - Under 18 years old — return "drink soda"
@@ -64,8 +76,16 @@ Create a function that take the age are return the appropiate drink based on the
 
 */
 
-function appropiateDrinks() {
-  // Your code
+function appropiateDrinks(age) {
+  if (age <= 14 ){
+    return "drink fruit juice"
+  }else if (age <= 18){
+    return "drink soda"
+  }else if(age < 21) {
+    return "drink fruit-flavored beer"
+  }else {
+    return "drink throat-piercing vodka"
+  }
 }
 
 /* 4. Add two numers or string
@@ -79,8 +99,15 @@ Twist is when user passes anything other than number, or string value you should
 
 */
 
-function sum() {
-  // Your code
+function sum(numA, numB) {
+  if (typeof numA == "string" && typeof numB == "string"){
+    return numA + numB
+  } else if (typeof numA == "number" && typeof  numB == "number"){
+    return (numA + numB)
+  } else {
+    return "Enter a valid value"
+  }
+
 }
 
 // Function Test
